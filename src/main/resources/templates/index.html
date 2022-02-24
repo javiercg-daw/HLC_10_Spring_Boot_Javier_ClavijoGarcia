@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='stylesheet' href='/webjars/bootstrap/5.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/webjars/jquery/3.6.0/jquery.min.js'>
+
+    <title>Javier Clavijo García -- HLC -- Spring Boot</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron col-8 bg-dark m-4 p-2">
+            <h2 th:text="${nombre} + ' '+ ${apellidos}" class="text-primary display-4 text-primary"/>
+            <hr class="my-4"/>
+            <ul>
+                <li th:text="'DNI: ' + ${dni}" class="lead text-light"/>
+                <li th:text="'NIF: ' + ${nif}" class="lead text-light"/>
+                <li th:text="'Ciudad: ' + ${ciudad}" class="lead text-light"/>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
